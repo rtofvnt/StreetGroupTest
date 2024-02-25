@@ -102,6 +102,12 @@ class CSVProcessor
                 $person['first_name'] = $word;
             }
         }
+
+        // Check if 'title' and 'last_name' are present
+        if (is_null($person['title']) || is_null($person['last_name'])) {
+            return []; // Return an empty array if 'title' or 'last_name' is missing
+        }
+
         return [$person];
     }
 }

@@ -29,7 +29,7 @@ class CsvController extends Controller
 
         $processor = new CSVProcessor($file->getPathname());
 
-        $processedData = $processor->read();
+      
         $processedData = $processor->process();
 
         
